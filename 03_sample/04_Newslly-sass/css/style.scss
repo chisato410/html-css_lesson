@@ -1,0 +1,246 @@
+@charset 'utf-8';
+
+$color-main: #FA6980;
+$color-text: #888;
+$color-title: #202124;
+$color-bg: #F6F6F6;
+$color-accent: #bbb;
+
+@mixin inner($w:88% ,$mw:800px){
+    width: $w;
+    max-width: $mw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin main-title(){
+    font-size: 24px;
+    font-weight: bold;
+    line-height: (31/24);
+    color: $color-title;
+    border-left: $color-main 10px solid;
+    padding: 0 0 0 10px;
+}
+
+@mixin mt($t: 60px){
+    margin-top: $t;
+}
+
+
+// basic
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: (24/14);
+    letter-spacing: 0;
+    color: $color-text;
+    background-color: #fff;
+}
+
+// header
+.header{
+    &__inner{
+        @include inner();
+    }
+    .header__logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// footer
+.footer{
+    background-color: $color-title;
+    padding: 100px 0 40px;
+
+    &__inner{
+        @include inner();
+    }
+
+    &__logo{
+        text-align: center;
+    }
+
+    &__copy{
+        font-size: 12px;
+        color: $color-accent;
+    }
+}
+
+// unit
+.unit{
+    &__catch{
+        font-size: 12px;
+        font-style: oblique;
+        color: $color-main;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        font-size: 18px;
+        font-weight: bold;
+        line-height: (23/18);
+        color: $color-title;
+        margin-top: 10px;
+
+        &--border{
+            border-bottom: $color-accent dashed 1px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__text{
+        margin-top: 15px;
+    }
+}
+
+// card
+.card{
+    &__body{
+        padding: 35px;
+        background-color: #fff;
+    }
+
+    &__title{
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-title;
+        line-height: (23/18);
+    }
+
+    &__text{
+        margin-top: 15px;
+    }
+}
+
+// time
+.time{
+    font-size: 12px;
+    line-height: (20/12);
+    background: url(../images/icon_time.png) no-repeat left center;
+    padding-left: 26px;
+    margin-top: 20px;
+}
+
+// btn
+.btn{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: (20/12);
+    color: #fff;
+    background-color: $color-main;
+    width: 160px;
+    padding: 14px 43px;
+    margin-left: auto;
+    margin-top: 25px;
+
+    &--about{
+        background-color: $color-title;
+    }
+}
+
+// index news
+.news{
+    @include mt();
+
+    &__inner{
+        @include inner();
+    }
+
+    &__title{
+        @include main-title();
+    }
+
+    &__list{
+        @include flex();
+    }
+
+    &__item{
+        width: (380/800*100%);
+        @include mt();
+    }
+}
+
+// index trending
+.trending{
+    background-color: $color-bg;
+    padding: 60px 0;
+    @include mt();
+
+    &__inner{
+        @include inner();
+    }
+
+    &__title{
+        @include main-title();
+    }
+
+    &__list{
+        @include flex();
+        margin-top: 30px;
+    }
+
+    &__item{
+        width: (380/800*100%);
+    }
+}
+
+// about post
+.post{
+    &__inner{
+        @include inner();
+    }
+
+    &__item{
+        margin-top: 40px;
+    }
+}
+
+// about discovery
+.discovery{
+    background-color: $color-bg;
+    @include mt();
+    padding: 60px 0;
+
+    &__inner{
+        @include inner();
+    }
+
+    &__title{
+        @include main-title();
+    }
+
+    &__list{
+        @include flex();
+    }
+
+    &__item{
+        width: (240/800*100%);
+        margin-top: 40px;
+    }
+}
+
+// 書き方
+// body{
+//     line-height: (24/14);
+//     letter-spacing: (50/1000)*1em;
+//     letter-spacing: (50em/1000);
+//     letter-spacing: (50%1000);
+//     width: (380/1200*100%);
+// }
