@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+$color-text: #31353B;
+$color-title: #000;
+$color-bg: #DBFFFF;
+$color-main: #FF9900;
+$color-accent: #F85A47;
+
+@mixin inner($w:1440px){
+    width: (1000/1440*100%);
+    max-width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $a;
+    justify-content: $j;
+}
+
+@mixin mt($t: 120px){
+    margin: $t 0 0 0;
+}
+
+// basic
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: (20em/1000);
+    line-height: (26/15);
+    color: $color-text;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+// header
+.header{
+    padding: 50px 0 80px;
+
+    &__inner{
+        @include inner();
+        @include flex();
+    }
+
+    &__title{
+        font-size: 24px;
+        font-weight: bold;
+        line-height: (24/24);
+    }
+}
+
+// footer
+.footer{
+    background-color: $color-bg;
+    padding: 100px 0;
+    @include mt();
+
+    &__inner{
+        text-align: right;
+        @include inner();
+    }
+
+    &__copy{
+        font-size: 12px;
+        font-weight: bold;
+        line-height: (26/12);
+        margin-top: 40px;
+    }
+}
+
+// nav
+.nav{
+    &__list{
+        @include flex($j:flex-end);
+    }
+
+    &__item{
+        margin-left: 30px;
+    }
+}
+
+// unit
+.unit{
+    &__catch{
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: (30/18);
+        color: $color-main;
+    }
+
+    &__title{
+        font-size: 48px;
+        line-height: (58/48);
+        color: $color-title;
+        margin-top: 20px;
+    }
+
+    &__text{
+        margin-top: 40px;
+    }
+}
+
+// group
+.group{
+    border: #a3a3a3 1px solid;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 45px 40px;
+
+    &__people{
+        @include flex($j:flex-start);
+        margin-top: 80px;
+    }
+
+    &__info{
+        margin-left: 20px;
+    }
+}
+
+// card
+.card{
+    width: (300/1000*100%);
+}
+
+// btn
+.btn{
+    display: inline-block;
+    font-weight: bold;
+    line-height: (15/15);
+    color: #fff;
+    background-color: $color-accent;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-top: 60px;
+
+    &--about{
+        width: 100%;
+        text-align: center;
+        background-color: $color-main;
+        padding: 20px 34px;
+        margin-top: 30px
+    }
+}
+
+// property
+.property{
+    &__inner{
+        @include inner();
+        @include flex();
+    }
+
+    &__visual{
+        width: (500/1000*100%);
+    }
+
+    &__info{
+        width: (440/1000*100%);
+    }
+
+    &--about{
+        @include mt();
+    }
+}
+
+// reviews
+.reviews{
+    @include mt();
+
+    &__inner{
+        @include inner();
+    }
+
+    &__list{
+        @include flex();
+        margin-top: 40px;
+    }
+
+    &__item{
+        width: (470/1000*100%);
+    }
+}
+
+// deals
+.deals{
+    &__inner{
+        @include inner();
+    }
+
+    &__list{
+        @include flex();
+        margin-top: 60px;
+    }
+}
