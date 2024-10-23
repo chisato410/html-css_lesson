@@ -13,11 +13,12 @@ $color-accent: #F85A47;
     margin-right: auto;
 }
 
-@mixin flex($a: center, $j: space-between){
+@mixin flex($a: center, $j: space-between ,$d: row){
     display: flex;
     flex-wrap: wrap;
     align-items: $a;
     justify-content: $j;
+    flex-direction: $d;
 }
 
 @mixin mt($t: 120px){
@@ -155,6 +156,11 @@ img{
     &__inner{
         @include inner();
         @include flex();
+
+        &--about{
+            @include flex(center ,space-between ,row-reverse );
+
+        }
     }
 
     &__visual{

@@ -25,6 +25,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
 .header__title {
   font-size: 24px;
@@ -56,6 +57,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
+  flex-direction: row;
 }
 .nav__item {
   margin-left: 30px;
@@ -89,6 +91,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+  flex-direction: row;
   margin-top: 80px;
 }
 .group__info {
@@ -126,6 +129,14 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+}
+.property__inner--about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 .property__visual {
   width: 50%;
@@ -151,6 +162,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   margin-top: 40px;
 }
 .reviews__item {
@@ -168,6 +180,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   margin-top: 60px;
 }
 /*# sourceMappingURL=style.css.map */
