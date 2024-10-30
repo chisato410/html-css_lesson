@@ -90,7 +90,7 @@ img {
   position: relative;
 }
 .unit__text {
-  margin-top: 30px;
+  margin: 30px 0 50px;
 }
 .unit__number {
   font-size: 18px;
@@ -181,12 +181,17 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
   }
 }
 @media screen and (min-width: 640px) {
   .services__item {
     width: 47.1428571429%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

@@ -127,7 +127,7 @@ img{
     }
 
     &__text{
-        margin-top: 30px;
+        margin: 30px 0 50px;
     }
 
     &__number{
@@ -205,13 +205,15 @@ img{
 
     &__list{
         @include m-query(tablet){
-            @include m-flex(flex-start);
+            @include m-flex(stretch);
         }
     }
 
     &__item{
         @include m-query(tablet){
             width: (330/700)*100%;
+            @include m-flex();
+            flex-direction: column;
         }
     }
 }
