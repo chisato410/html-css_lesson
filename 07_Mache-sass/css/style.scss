@@ -254,6 +254,10 @@ img{
             width: (420/900)*100%;
         }
     }
+
+    &__item:nth-child(odd) .card__title{
+        margin-left: auto;
+    }
 }
 
 .testimonials{

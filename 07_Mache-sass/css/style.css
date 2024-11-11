@@ -229,6 +229,9 @@ img {
     width: 46.6666666667%;
   }
 }
+.services__item:nth-child(odd) .card__title {
+  margin-left: auto;
+}
 
 .testimonials {
   background: url(../images/bg_testimonials.png) no-repeat center/cover;
